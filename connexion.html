@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - École XYZ</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que ce chemin est correct -->
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  font-family: sans-serif;
+  text-align: center;
+}
+body, html {
+  height: 100%; /* Donne une hauteur de 100% à la page */
+  margin: 0; /* Enlève les marges par défaut */
+  display: flex; /* Utilise Flexbox pour le positionnement */
+  flex-direction: column; /* Organise le contenu en colonne */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+}
+.logo {
+  width: 100px; 
+  position: absolute; 
+  top: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+main{
+  text-align: center;
+  margin-bottom: 15rem;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+h1 {
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+}
+#main-content{
+  margin-top: 5rem;
+}
+.section a, h1{
+  text-align: center;
+  margin-top: 45px;
+}
+.section a{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.section a:hover{
+  color: blue;
+}
+
+.nav-latteral {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: white;
+  z-index: 3;
+  height: 100vh;
+  width: max-content;
+  transition: all 0.1s ease;
+}
+
+#nav-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: none;
+}
+
+#nav-wrapper.active {
+  display: block;
+}
+
+#nav-close {
+  margin-bottom: 4rem;
+}
+
+.nav-links {
+  padding: 1rem 6rem 1rem 3rem;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-size: 25px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link a:hover {
+  color: blue;
+}
+.nav-link a{
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-link ion-icon {
+  margin-right: 15px;
+}
+
+.nav-link{
+  transition: all 0.2s ease;
+}
+
+.nav-button {
+  font-size: 40px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  color: bleu;
+  background-color: #dedede;
+}
+/* Default button style */
+.button {
+  padding: 10px 20px;
+  background-color: blue; 
+  color: white; 
+  font-size: 20px; 
+}
+main::-webkit-scrollbar {
+  background-color: #dedede;
+  width: 0.5rem;
+}
+main::-webkit-scrollbar-thumb {
+  background-color: #757575;
+}
+
+/* Button style for screens less than 600px wide */
+@media (max-width: 600px) {
+  .button {
+    padding: 20px 40px; /* Increase padding */
+    font-size: 24px; /* Increase font size */
+    display: block; /* Change display to block if needed */
+  }
+}
+
+  /* Styles CSS de base */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+ 
+  }
+  /* Styles pour les sections */
+  .section {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  /* Ajoutez ici d'autres styles spécifiques à votre site */
+  </style>
+</head>
+<body>
+    <div id="nav-latteral" class="nav-latteral">
+        <div id="nav-close" class="nav-button">
+          <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="nav-links">
+          <div class="nav-link" style="color: black;">
+            <a href="#" style="color: black;">Mon profil</a>
+          </div>
+          <div class="nav-link" style="color: black;">
+            <a href="Tableau de bord.html" style="color: black;">Horrair</a>
+          </div>
+          <div class="nav-link">
+            <a href="#"style="color: black;">Cours</a>
+          </div>
+          <div class="nav-link">
+            <a href="Tableau de bord.html"style="color: black;">Cotes</a>
+          </div>
+          <div class="nav-link">
+              <a href="Evenements.html"style="color: black;">Enouvelles evenements</a>
+            </div>
+            <div class="nav-link">
+              <a href="Tableau de bord.html"style="color: black;">Tableau-bord</a>
+            </div>
+            <div class="nav-link" style="color: black;">
+              <a href="#" style="color: black;">Se deconnecter</a>
+            </div>
+        </div>
+      </div>
+      <div id="nav-wrapper"></div>
+      <nav>
+        <div id="nav-open" class="nav-button">
+          <ion-icon name="reorder-three"></ion-icon>
+        </div>
+      </nav>
+
+<!-- Contenu principal -->
+<div id="main-content">
+  <!-- Section de gestion des paiements -->
+  <div id="gestion-paiements" class="section">
+    <a href="paiement.html"><h1>Gestion des paiements et de facturation</h1></a>
+    <!-- Contenu de la gestion des paiements ici -->
+  </div>
+
+  <!-- Tableau de bord des étudiants -->
+  <div id="tableau-bord-etudiants" class="section">
+    <a href="Tableau de bord.html"><h1>Tableau de bord des étudiants</h1></a>
+    <!-- Contenu du tableau de bord des étudiants ici -->
+  </div>
+
+  <!-- Section des nouvelles et événements -->
+  <div id="nouvelles-evenements" class="section">
+    <a href="Evenements.html"><h1>Nouvelles et Événements</h1></a>
+    <!-- Contenu des nouvelles et événements ici -->
+  </div>
+</div>
+
+<!-- Navigation latérale (deuxième code) -->
+<div id="nav-latteral" class="nav-latteral">
+  <!-- Votre navigation latérale ici -->
+</div>
+
+<!-- Scripts JavaScript -->
+<script>
+  let openBtn = document.getElementById("nav-open");
+let closeBtn = document.getElementById("nav-close");
+let navWrapper = document.getElementById("nav-wrapper");
+let navLatteral = document.getElementById("nav-latteral");
+
+const openNav = () => {
+  navWrapper.classList.add("active");
+  navLatteral.style.left = "0";
+};
+
+const closeNav = () => {
+  navWrapper.classList.remove("active");
+  navLatteral.style.left = "-100%";
+};
+
+openBtn.addEventListener("click", openNav);
+closeBtn.addEventListener("click", closeNav);
+navWrapper.addEventListener("click", closeNav);
+</script> <!-- Assurez-vous que ce chemin est correct -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+

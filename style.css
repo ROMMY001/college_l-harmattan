@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:  #0026fd;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+main {
+    padding: 2em;
+}
+
+form {
+    background-color: white;
+    padding: 2em;
+    margin: auto;
+    width: fit-content;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 1.6em); 
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 1em 1.5em;
+    background-color: #0026fd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#lienInscription {
+    text-align: center;
+    margin-top: 1em;
+}
+
+#lienInscription a {
+    color: #0026fd;
+    text-decoration: none;
+}
+/*Pour que la page soit adaapté a tous les écrans */
+@media (max-width: 768px) {
+    header h1,
+    header h2 {
+        font-size: 1.2em; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+
+    main {
+        padding-left: 10px; 
+        padding-right: 10px;
+        padding-top: 1em; 
+        padding-bottom: 1em; 
+    }
+
+    form {
+        width: auto; 
+        box-shadow:none; 
+        border-radius:none; 
+        padding-left:none; 
+        padding-right:none; 
+        padding-top:none; 
+        padding-bottom:none; 
+        }
+    }

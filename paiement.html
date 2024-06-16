@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Tableau des Paiements Mensuels</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .paid {
+    background-color: #90ee90; /* Light green for paid */
+  }
+  .not-paid {
+    background-color: #ffcccb; /* Light red for not paid */
+  }
+
+  @media screen and (max-width: 600px) {
+    th, td {
+      display: block;
+      width: 100%;
+    }
+    th, td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+    th, td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+</style>
+</head>
+<body>
+
+<center><h2>Tableau des Paiements Mensuels</h2></center>
+
+<table>
+  <tr>
+    <th>Mois</th>
+    <th>Date de Paiement</th>
+    <th>Montant</th>
+    <th>Statut</th>
+  </tr>
+  <tr>
+    <td data-label="Mois">Janvier</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Fevrier</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Mars</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Avril</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Mai</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Juin</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Juillet</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Aout</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">50€</td>
+    <td data-label="Statut" class="paid">Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Septembre</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">#</td>
+    <td data-label="Statut" class="not-paid">Non Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Octobre</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">#</td>
+    <td data-label="Statut" class="not-paid">Non Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Novembre</td>
+    <td data-label="Date de Paiement">15/01/2024</td>
+    <td data-label="Montant">#</td>
+    <td data-label="Statut" class="not-paid">Non Payé</td>
+  </tr>
+  <tr>
+    <td data-label="Mois">Décembre</td>
+    <td data-label="Date de Paiement">15/12/2024</td>
+    <td data-label="Montant">#</td>
+    <td data-label="Statut" class="not-paid">Non Payé</td>
+  </tr>
+</table>
+
+</body>
+</html>
