@@ -6,7 +6,7 @@ document.getElementById('formulaireInscription').addEventListener('submit', func
 
     if(matricule && motdepasse) {
         // Si les deux champs sont remplis redirige vers la page de cotation
-        window.location.href = 'page-de-cotation.html';
+        window.location.href = 'connexion.html';
     } else {
         // Sinon affiche un message d'erreur ou ne fait rien
         alert('Veuillez remplir tous les champs.');
